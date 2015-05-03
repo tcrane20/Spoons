@@ -6,6 +6,7 @@ var main = function () {
     var username;
     var playerIndex = 0;
     var socket = io();
+    var timer = 0;
     // Assign action to submit button
     $("input.userSubmit").on("click", function(event){
         event.preventDefault();
@@ -63,12 +64,29 @@ var main = function () {
         playerIndex = index;
     });
 
+    socket.on("time", function (time){
+        timer = time;
+        if (time > 0)
+            $("div.timer").text(timer);
+        else
+            $("div.timer").text("");
+    });
+
     socket.on("gameStart", function(){
         scene = 2;
         $("div.waitingRoom").hide();
 
         $("div.gameScene").show();
     });
+
+    setInterval(function(){
+        if (timer > 0){
+            timer--;
+            $("div.timer").text(timer);
+        } else {
+            $("div.timer").text("");
+        }
+    }, 1000);
 
 };
 

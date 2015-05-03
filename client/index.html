@@ -8,9 +8,13 @@
   </head>
 
   <body>
+    <!-- Timer element for displaying countdowns. Visible on multiple scenes.-->
+    <div class='timer'></div>
+
+
+
     <!-- INITIAL VIEW (create username page)-->
     <div class='initialView'> 
-
       <div class='container'>
         <h1>Insert Username</h1>
       </div>
@@ -27,10 +31,11 @@
 
         </div>
       </div>
-
     </div>
-    <!-- -->
 
+
+
+    <!-- WAITING ROOM where players wait for other users to join the room-->
     <div class="waitingRoom">
       <h1>WAITING FOR PLAYERS...</h1>
       <table border="1" style="width:100%">
@@ -41,6 +46,10 @@
       </table>
     </div>
 
+
+
+
+    <!-- GAME SCENE where the actual game takes place-->
     <div class="gameScene">
       <div class="player u0"></div>
       <div class="player u1"></div>
@@ -50,6 +59,10 @@
       <div class="player u5"></div>
       <div class="player u6"></div>
     </div>
+
+
+
+
 
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="javascript/app.js"></script>
