@@ -3,13 +3,12 @@ var http = require('http');
 var express = require('express');
 var cookieParser = require('cookie-parser');  
 var socketIO = require('socket.io');  
-var session = require('express-session');  
+var expressSession = require('express-session');  
 var SessionSockets = require('session.socket.io');  
-var sessionStore = new session.MemoryStore();  
+var sessionStore = new expressSession.MemoryStore();  
 var app = express();
 var server =  http.Server(app);
 var io = socketIO(server);  
-var sessionSockets = new SessionSockets(io, sessionStore, cookieParser());
 var bodyParser = require("body-parser");
 var redis = require("redis");
 var client = redis.createClient();
@@ -22,9 +21,12 @@ app.use(express.static(__dirname + "/client"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(cookieParser());
-app.use(session());
-app.use(app.router);
+var myCookieParser = cookieParser('test');
+
+app.use(myCookieParser);
+app.use(expressSession( {secret: 'test', store: sessionStore} ));
+
+var sessionSockets = new SessionSockets(io, sessionStore, myCookieParser);
 
 // Socket.IO things============================================================
 var openRoomID = 0;
