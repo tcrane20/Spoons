@@ -10,3 +10,11 @@ div.player {
   border: 15px solid navy;
   margin: 15px;
 }
+
+#card {
+  zoom: 25%;
+}
+
+#spoon {
+  zoom: 50%;
+}
