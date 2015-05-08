@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Spoons! - Login</title>
+        <link href="stylesheets/reset.css" rel="stylesheet" type="text/css">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+            	<img class="headerlogo" src="images/logo.png">
+                <nav>
+                    Sign In |
+                    <a href="/register">Register</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <img class="rightimg" src="images/tick_jump.gif">
+            <div class="description">
+                <h2>Sign in!</h2>
+                <p>The real-time online multiplayer card game where you race against other players to get four of a kind and grab a spoon before your opponents!</p>
+            </div>
+        
+            <div class="login">
+                <span id="alert" class="alert"></span>
+                <div class="form-group">
+                    <input id="username" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input id="password" type="password" class="form-control">
+                </div>
+                <button id="btn_login" class="login-label btn btn-primary">Login</button>
+                <a href="/register">Not a member? Sign up now!</a>
+            </div>
+        </div>
+
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha256.js"></script>
+        <script src="javascript/login.js"></script>
+    </body>
+</html>

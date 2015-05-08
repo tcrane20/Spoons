@@ -1,0 +1,175 @@
+/*
+ * Maintain aspect ratio of DIV using CSS.
+ * Source: http://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio
+ */
+.aspectRatio {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+.aspectRatio:after {
+	padding-top: 65.44%;
+	/* 1070:700; ratio */
+	display: block;
+	content: '';
+}
+
+.gameScene {
+	margin: 5px;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+#card {
+	width: 25%;
+	height: 100%;
+}
+
+#card.top, #card.cardpile {
+	width: 100%;
+	height: 100%;
+}
+
+#spoon {
+	width: 7.5%;
+	height: 100%;
+}
+
+.playerTable {
+    background: white;
+    margin: 1em auto;
+    border: solid black 2px;
+    width: 50%;
+}
+
+.index, .user {
+    padding: 0.5em;
+    border: solid #BABABA 1px;
+}
+
+.spoons {
+	background: #8C8681;
+    color: white;
+	text-align: center;
+    border: solid #744400 1px;
+    width: 72%;
+    height: 39.3%;
+    position: absolute;
+    top: 21.4%;
+    left: 14%;
+    border-radius: 25px;
+}
+
+.playerWin {
+    color: green;
+    font-weight: bold;
+}
+
+.playerLose {
+    color: red;
+    font-weight: bold;
+}
+
+.hand {
+	background: black;
+    border: solid black 1px;
+    width: 46.5%;
+    height: 26%;
+    position: absolute;
+    top: 67.9%;
+    left: 14%;
+}
+
+.topcard {
+	background: black;
+    border: solid black 1px;
+    width: 11.8%;
+    height: 26%;
+    position: absolute;
+    top: 67.9%;
+    left: 61.7%;
+}
+
+.pile {
+	background: black;
+    border: solid black 1px;
+    width: 11.8%;
+    height: 26%;
+    position: absolute;
+    top: 71.4%;
+    left: 74.3%;
+}
+
+.pile, .topcard, .hand {
+	background: #666A73;
+    border-radius: 5px;
+	overflow: hidden;
+}
+
+.player {
+	background: #D9D1C7;
+	vertical-align: middle;
+	text-align: center;
+	text-overflow: ellipsis;
+    width: 9.3%;
+    height: 14.3%;
+    border: 10px solid;
+    border-radius: 15px;
+	overflow: hidden;
+}
+
+.emptyPlayer {
+    background: black;
+}
+
+.u0 {
+    border-color: #0000CC;
+    position: absolute;
+    top: 42.9%;
+    left: 0%;
+}
+
+.u1 {
+    border-color: #CC00CC;
+    position: absolute;
+    top: 25%;
+    left: 0%;
+}
+
+.u2 {
+    border-color: #00CC00;
+    position: absolute;
+    top: 0%;
+    left: 33.6%;
+}
+
+.u3 {
+    border-color: #CCCC00;
+    position: absolute;
+    top: 0%;
+    left: 45.3%;
+}
+
+.u4 {
+    border-color: #336666;
+    position: absolute;
+    top: 0%;
+    left: 57%;
+}
+
+.u5 {
+    border-color: #CC0000;
+    position: absolute;
+    top: 42.9%;
+    right: 0%;
+}
+
+.u6 {
+    border-color: #663300;
+    position: absolute;
+    top: 25%;
+    right: 0%;
+}

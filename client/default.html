@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Spoons!</title>
+        <link href="stylesheets/reset.css" rel="stylesheet" type="text/css">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/game.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/animate.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <img class="headerlogo" src="images/logo.png">
+                <nav>
+                    <a id="joinLobby">Join Lobby</a> |
+                    <a href="/logout">Logout</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Timer element for displaying countdowns. Visible on multiple scenes.-->
+        <div class="timer"></div>
+
+        <!-- WAITING ROOM where players wait for other users to join the room -->
+        <div class="waitingRoom">
+            <h3>Waiting for players...</h3>
+            <table class="playerTable">
+                <td class="index"></td>
+                <td class="user"></td>
+            </table>
+        </div>
+
+        <!-- GAME SCENE where the actual game takes place -->
+        <div class="aspectRatio">
+            <div class="gameScene">
+                <div class="player u0"></div>
+                <div class="player u1"></div>
+                <div class="player u2"></div>
+                <div class="player u3"></div>
+                <div class="player u4"></div>
+                <div class="player u5"></div>
+                <div class="player u6"></div>
+                <div class="spoons"></div>
+                <div class="hand"></div>
+                <div class="topcard"></div>
+                <div class="pile"></div>
+            </div>
+        </div>
+
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+        <script src="javascript/app.js"></script>
+        <script src="javascript/jquery.noty.packaged.min.js"></script>
+        <script src="javascript/center.js"></script>
+        <script src="javascript/inline.js"></script>
+        <script src="javascript/themes/relax.js"></script>
+    </body>
+</html>

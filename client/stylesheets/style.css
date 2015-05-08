@@ -1,20 +1,115 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
+	font-family: Calibri, Verdana, Helvetica, sans-serif;
+	background: #F2EDE4;
+	/*background-image: url(../images/background.png);
+	background-repeat: repeat;*/
 }
 
-div.player {
-  background-color: lightgrey;
-  width: 100px;
-  padding: 15px;
-  border: 15px solid navy;
-  margin: 15px;
+body .container {
+	padding: 1em;
 }
 
-#card {
-  zoom: 25%;
+h2 {
+	font-size: 1.5em;
 }
 
-#spoon {
-  zoom: 50%;
+h3 {
+	padding: 1em;
+}
+
+body .description {
+	width: 400px;
+}
+
+body .alert {
+	text-align: left;
+	font-size: 0.75em;
+	font-weight: bold;
+	color: red;
+}
+
+body .login {
+	width: 400px;
+}
+
+.login-label {
+}
+
+body .form-group {
+	max-width: 300px;
+}
+
+/* Header */
+header {
+	background: #2F3540;
+	overflow: hidden;
+	border-bottom: 1px solid;
+	border-color: #D3D3D3;
+}
+
+header nav {
+	color: white;
+	display: inline-block;
+	width: 285px;
+	text-align: center;
+}
+
+.headerlogo {
+	margin: -15px;
+	height: 65px;
+}
+
+.rightimg {
+	float: right;
+	height: 150px;
+}
+
+.h1nav {
+	padding-left: 25px;
+	display: inline-block;
+	font-size: 2em;
+}
+
+/* Nav Links */
+nav a {
+	color: yellow;
+	text-decoration: none;
+	outline: none;
+}
+
+nav a:hover, nav a:visited:hover {
+	color: red;
+	text-decoration: none;
+}
+
+nav a:active, nav a:visited:active {
+	color: lightblue;
+	text-decoration: none;
+}
+
+nav a:visited {
+	color: #BDA0CB;
+	text-decoration: none;
+}
+/* Normal Links */
+
+a {
+	color: blue;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:visited:hover {
+	color: red;
+	text-decoration: none;
+}
+
+a:active, a:visited:active {
+	color: darkblue;
+	text-decoration: none;
+}
+
+a:visited {
+	color: purple;
+	text-decoration: none;
 }
