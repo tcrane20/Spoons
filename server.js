@@ -22,6 +22,9 @@ app.use(expressSession({
 	saveUninitialized: true
 }));
 
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 3000);  
+app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
+
 var server = http.Server(app);
 var socketIO = require("socket.io");
 var io = socketIO(server);

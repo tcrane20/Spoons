@@ -8,7 +8,7 @@ var main = function () {
 	var hasSpoon = false;
 	var topCardVisible = false;
 	var inactiveCounter = 0; // Counts how many times in a row the game catches the player not doing anything. Too many and the user is kicked.
-	var socket = io();
+	var socket = io.connect("http://spoons-spoons.rhcloud.com:8000");
 
 	var scene = 1;		// Login is no longer part of this page.
 	var WAITING = 1,	// Waiting room scene
